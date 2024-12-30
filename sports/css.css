@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: "Rockwell";
+  src: url("fonts/Rockwell-Regular.woff2") format("woff2"),
+    url("fonts/Rockwell-Regular.woff") format("woff"),
+    url("fonts/Rockwell-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  font-family: "Rubik", sans-serif;
+  background: linear-gradient(to bottom right, #bbe6f0 0%, #f8f8f8 80%);
+  position: relative;
+  min-height: 100vh;
+  padding: 2rem;
+}
+.home-start-button {
+  position: absolute;
+  top: 45.8rem;
+  left: 7.3rem;
+  padding: 1rem;
+  font-size: 1.25rem;
+  width: 8.5rem;
+  animation-fill-mode: backwards;
+  animation: fadeIn 1s ease-in 0s;
+  background: linear-gradient(to bottom right, #a52a2a, #e83d3d);
+  color: white;
+  box-shadow: 1.5px 2px 4px rgba(0, 0, 0, 0.5);
+  border: 1px solid black;
+  border-radius: 2.5rem;
+  cursor: pointer;
+}
+.home-start-button:hover {
+  background: linear-gradient(to bottom right, #e83d3d, #a52a2a);
+}
+.home-start-button:active {
+  transform: translateY(1.5px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.sports-text {
+  font-family: "Rubik";
+  font-size: 1.8rem;
+  position: absolute;
+  top: 13rem;
+  left: 2rem;
+  max-width: 600px;
+  line-height: 1.6;
+}
+.sports-image1 {
+  width: 32rem;
+  position: absolute;
+  top: 7rem;
+  right: 1%;
+}
+.sports-image2 {
+  width: 5.4rem;
+  position: absolute;
+  top: 3.9rem;
+  left: 42rem;
+}
+.home-icon {
+  width: 4.5rem;
+  position: absolute;
+  top: 2rem;
+  right: 4rem;
+}
+#sports-opening-main-text {
+  position: absolute;
+  top: 4rem;
+  left: 2rem;
+  font-family: "Rockwell";
+  font-size: 3rem;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

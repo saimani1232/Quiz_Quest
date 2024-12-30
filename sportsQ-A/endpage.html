@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>End page</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Rubik", sans-serif;
+        background: linear-gradient(to bottom right, #bbe6f0 0%, #f8f8f8 80%);
+        position: relative;
+        min-height: 100vh;
+        padding: 2rem;
+      }
+      .check-score-button {
+        position: absolute;
+        top: 40.8rem;
+        left: 7.3rem;
+        padding: 1rem;
+        font-size: 1.25rem;
+        width: 9.5rem;
+        animation-fill-mode: backwards;
+        animation: fadeIn 1s ease-in 0s;
+        background: linear-gradient(to bottom right, #a52a2a, #e83d3d);
+        color: white;
+        box-shadow: 1.5px 2px 4px rgba(0, 0, 0, 0.5);
+        border: 1px solid black;
+        border-radius: 2.5rem;
+        cursor: pointer;
+      }
+      .check-score-button:hover {
+        background: linear-gradient(to bottom right, #e83d3d, #a52a2a);
+      }
+      .hidden {
+        display: none;
+      }
+      .Score-text {
+        position: absolute;
+        bottom: 4.8rem;
+        font-size: 1.5rem;
+        left: 5.3rem;
+      }
+      .check-score-button:active {
+        transform: translateY(1.5px);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+      }
+      .movies-text {
+        font-family: "Rubik";
+        font-size: 1.8rem;
+        position: absolute;
+        top: 5rem;
+        left: 0rem;
+        max-width: 600px;
+        line-height: 1.6;
+      }
+      .end-image {
+        width: 30rem;
+        position: absolute;
+        top: 9rem;
+        right: 3%;
+      }
+
+      .trophies {
+        position: absolute;
+        right: 24rem;
+        font-size: 1.5rem;
+        bottom: 6rem;
+      }
+
+      .home-icon {
+        width: 4.5rem;
+        position: absolute;
+        top: 2rem;
+        right: 4rem;
+      }
+      #movies-opening-main-text {
+        position: absolute;
+        top: 4rem;
+        left: 2.8rem;
+        font-family: "Rockwell";
+        font-size: 3rem;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      .trophie {
+        width: 7rem;
+        position: absolute;
+        bottom: -5rem;
+      }
+      .trophie-image {
+        position: absolute;
+        bottom: 5rem;
+        right: 20rem;
+        width: 5rem;
+      }
+      .you-won {
+        display: none;
+        position: absolute;
+        bottom: 10rem;
+        right: 26rem;
+        font-size: 1.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <pre class="movies-text">
+        Champion! 🏆
+
+    "You're a true sports fanatic!
+        
+     You've proven yourself as the Most Valuable Player of this quiz
+      Keep aiming for the top!      
+
+     " Your sports knowledge is in a league of its own. Well done!"
+        
+      Your dedication and passion for sports have shone through with every
+       correct answer  
+      Wanna check your score 👇
+    </pre>
+    <img src="end-image.png" alt="movies-image1" class="end-image" />
+
+    <a href="/Home/homepage.html">
+      <img src="home-icon.png" alt="home-icon" class="home-icon"
+    /></a>
+    <span class="you-won hidden">You Won:</span>
+    <img src="" class="trophie-image hidden" alt="Trophy Image">
+    <button type="button" class="check-score-button">Check Score</button>
+    <p class="Score-text hidden">Score: <span class="scorer"></span></p>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const correctFeedback = document.getElementById('correctFeedback');
+        const incorrectFeedback = document.getElementById('incorrectFeedback');
+        const gif = document.querySelector('.gifl');
+        const nextButton = document.querySelector('.home-start-button');
+        const checkButton = document.querySelector('.check-button');
+        const scoreButton = document.querySelector('.check-score-button');
+        const trophyImage = document.querySelector('.trophie-image');
+        const youWonText = document.querySelector('.you-won');
+
+        if (!localStorage.getItem('score')) {
+          localStorage.setItem('score', '0');
+        }
+
+        function showFeedback(isCorrect, correctAnswer = '') {
+          if (isCorrect) {
+            correctFeedback.innerHTML = `Correct! well done!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp  `;
+            correctFeedback.style.display = 'block';
+            correctFeedback.classList.add('fadeInOut');
+            gif.classList.remove('hidden');
+            gif.classList.add('fadeInOut');
+            setTimeout(() => {
+              correctFeedback.style.display = 'none';
+              correctFeedback.classList.remove('fadeInOut');
+              gif.classList.add('hidden');
+              gif.classList.remove('fadeInOut');
+              nextButton.classList.remove('hidden');
+              checkButton.classList.add('hidden');
+            }, 6000);
+          } else {
+            incorrectFeedback.textContent = `Incorrect! The correct answer is ${correctAnswer}`;
+            incorrectFeedback.style.display = 'block';
+            incorrectFeedback.classList.add('fadeInOut');
+            setTimeout(() => {
+              incorrectFeedback.style.display = 'none';
+              incorrectFeedback.classList.remove('fadeInOut');
+            }, 6000);
+          }
+        }
+
+        window.checkAnswer = function(correctAnswer) {
+          const form = document.querySelector('form');
+          const selectedInput = form.querySelector('input[name="sports"]:checked');
+
+          if (selectedInput) {
+            const selectedValue = selectedInput.value;
+
+            form.querySelectorAll('input[name="sports"]').forEach(input => {
+              input.disabled = true;
+
+              if (input.value === correctAnswer) {
+                const correctImage = input.previousElementSibling;
+                correctImage.classList.remove('hidden');
+              }
+            });
+
+            if (selectedValue === correctAnswer) {
+              showFeedback(true);
+
+              let score = parseInt(localStorage.getItem('score'));
+              localStorage.setItem('score', (score + 1).toString());
+            } else {
+              showFeedback(false, correctAnswer);
+            }
+
+            form.reset();
+            form.querySelectorAll('input[name="sports"]').forEach(input => {
+              input.disabled = true;
+            });
+
+            nextButton.classList.remove('hidden');
+            checkButton.classList.add('hidden');
+          } else {
+            alert('Please select an answer before submitting.');
+          }
+        };
+
+        window.displayscore = function() {
+          const showscore = document.querySelector('.scorer');
+          const scoredisplay = document.querySelector('.Score-text');
+          let score = parseInt(localStorage.getItem('score'));
+          showscore.textContent = score;
+          scoredisplay.classList.remove('hidden');
+          trophyImage.classList.remove('hidden');
+          youWonText.classList.remove('hidden');
+         console.log( youWonText.classList.remove('hidden'));
+          
+
+          // Determine the trophy image based on the score
+          if (score >= 10) {
+            trophyImage.src = '/Trophies/Gold.png';
+          } else if (score >= 5) {
+            trophyImage.src = '/Trophies/Silver.png';
+          } else if (score >= 1) {
+            trophyImage.src = '/Trophies/Bronze.png';
+          } else {
+            trophyImage.classList.add('hidden');
+          }
+
+        if(score===0) {
+           
+            youWonText.innerHTML=`Better luck Next Time`;
+          }
+
+          localStorage.removeItem('score');
+        };
+
+        scoreButton.addEventListener('click', displayscore);
+      });
+    </script>
+  </body>
+</html>
