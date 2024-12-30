@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>FAQs Unraveled</title>
+
+    <link rel="stylesheet" href="Faq.css" />
+  </head>
+  <body>
+    <div class="faqs">
+      <h1 class="faq-text">"FAQs Unraveled: Where Curiosity Meets Clarity!"</h1>
+
+      <div class="faq-container">
+        <div class="faq-item" onclick="openPopup('popup1')">
+          How are the quizzes structured? <button class="faq-button">></button>
+        </div>
+
+        <div class="faq-item" onclick="openPopup('popup2')">
+          Can I take quizzes more than once?
+          <button class="faq-button">></button>
+        </div>
+
+        <div class="faq-item" onclick="openPopup('popup3')">
+          How do I begin? <button class="faq-button">></button>
+        </div>
+
+        <div class="faq-item" onclick="openPopup('popup4')">
+          Are the quizzes free? <button class="faq-button">></button>
+        </div>
+
+        <div class="faq-item" onclick="openPopup('popup5')">
+          Are the quizzes tough? <button class="faq-button">></button>
+        </div>
+      </div>
+    </div>
+
+    <div id="popup1" class="popup">
+      <div class="popup-content">
+        <span class="close" onclick="closePopup('popup1')">&times;</span>
+        <p>
+          Our quizzes are multiple-choice and cover a wide range of topics. Each
+          quiz consists of a set number of questions you need to answer.
+        </p>
+      </div>
+    </div>
+
+    <div id="popup2" class="popup">
+      <div class="popup-content">
+        <span class="close" onclick="closePopup('popup2')">&times;</span>
+        <p>
+          Absolutely! You can retake any quiz as many times as you like to
+          improve your score and knowledge.
+        </p>
+      </div>
+    </div>
+
+    <div id="popup3" class="popup">
+      <div class="popup-content">
+        <span class="close" onclick="closePopup('popup3')">&times;</span>
+        <p>
+          Starting is easy! Just sign up or log in, pick a quiz that interests
+          you, and start answering questions. Have fun!
+        </p>
+      </div>
+    </div>
+
+    <div id="popup4" class="popup">
+      <div class="popup-content">
+        <span class="close" onclick="closePopup('popup4')">&times;</span>
+        <p>Yes, all of our quizzes are completely free to take.</p>
+      </div>
+    </div>
+
+    <div id="popup5" class="popup">
+      <div class="popup-content">
+        <span class="close" onclick="closePopup('popup5')">&times;</span>
+        <p>
+          Our quizzes range in difficulty to challenge all levels of knowledge.
+          Whether you're a beginner or a trivia master, you'll find questions
+          that suit your skill level.
+        </p>
+      </div>
+    </div>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>

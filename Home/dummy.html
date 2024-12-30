@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./homestyles.css" />
+    <link rel="stylesheet" href="/contact/contactUs.css" />
+    <link rel="stylesheet" href="/FAQ/Faq.css" />
+    <link rel="stylesheet" href="/About/aboutstyles.css" />
+    <link rel="stylesheet" href="/categories/categories.css" />
+    <link rel="icon" type="img" href="favicon.png">
+    <title>Quiz Quest</title>
+<style>
+ @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Rubik";
+  scroll-behavior: smooth;
+}
+
+.bg-maker {
+  background: linear-gradient(to bottom right , #fdf1e8 30%, #f3bfe4 100%);
+  width: 100%;
+  height: 55rem;
+  position: relative;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #ffffffc9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.home {
+  width: 100%;
+  height: max-content;
+}
+
+.navigation-bar a {
+  font-size: 1.3rem;
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  transition: none;
+}
+
+.navigation-bar a:hover {
+  text-decoration: underline;
+  transition: all 2s ease;
+}
+
+.welcome-text {
+  font-weight: 420;
+  position: absolute;
+  top: 12rem;
+  left: 3.5rem;
+  font-size: 4rem;
+}
+
+.welcome-image1, .welcome-image2, .welcome-image3 {
+  transition: transform 0.5s ease-in-out, right 0.5s ease-in-out, top 0.5s ease-in-out;
+  position: absolute;
+  width: 23rem;
+}
+
+.welcome-image1 {
+  right: 1%;
+  top: 10rem;
+  animation: moveToLeft 1s ease-in 0s;
+}
+
+.welcome-image2 {
+  right: 2%;
+  top: 25rem;
+  z-index: 3;
+  animation: moveToRight 1s ease-in 0s;
+}
+
+.welcome-image3 {
+  right: 19%;
+  top: 19rem;
+  animation: moveToBottom 1s ease-in 0s;
+}
+
+.home-start-button, .learn-more-button {
+  position: absolute;
+  padding: 1.5rem 2.1rem;
+  text-decoration: none;
+  font-size: 1.3rem;
+  animation-fill-mode: backwards;
+  color: white;
+  box-shadow: 0 4px 15px rgba(79, 172, 254, 0.5);
+  border: none;
+  border-radius: 10rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: linear-gradient(-45deg, #FFA63D, #FF3D77, #1772e8, #3CF0C5);
+  background-size: 600%;
+  animation: anime 16s linear infinite;
+}
+
+.btn2 {
+  position: absolute;
+  margin-top: -70px;
+  z-index: -1;
+  filter: blur(30px);
+  opacity: 0.8;
+}
+
+@keyframes anime {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.home-start-button:hover, .learn-more-button:hover {
+  transform: scale(1.05);
+}
+
+.home-start-button:active, .learn-more-button:active {
+  transform: translateY(2px);
+  box-shadow: 0 4px 10px rgba(79, 172, 254, 0.3);
+}
+
+.home-start-button {
+  top: 39rem;
+  left: 8rem;
+}
+
+.learn-more-button {
+  top: 39rem;
+  left: 25rem;
+}
+
+.supported-text {
+  position: absolute;
+  top: 29rem;
+  left: 2.5rem;
+  font-size: 1.5rem;
+  line-height: 2.3rem;
+}
+
+@keyframes moveToLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  80% {
+    transform: translateX(10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveToRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  80% {
+    transform: translateX(-10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveToBottom {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+
+  80% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(10px);
+  }
+}
+
+#games {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 6rem;
+  padding-top: 6rem;
+  background-color: aliceblue;
+  
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.game-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2.5rem;
+}
+
+.bored-img {
+  width: 26rem;
+  height: 23rem;
+  margin-top: 3rem;
+}
+
+.cta-button {
+  padding: 15px 30px;
+  padding-top: 18px;
+  padding-left: 36px;
+  font-size: 1.5rem;
+  max-width: 11rem;
+  vertical-align: center;
+  max-height: 4.9rem;
+  background-color: #ff5c5c;
+  color: white;
+  text-decoration: none;
+  border-radius: 5rem;
+  transition: background-color 0.3s ease;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 0rem;
+  align-items: center;
+  z-index: 5;
+}
+
+.homeicon {
+  height: 7rem;
+  margin-right: 1.5rem;
+}
+
+.quizquest {
+  color: #000000;
+  font-size: 24px;
+}
+
+.navigation-bar {
+  display: flex;
+  gap: 2rem;
+  margin-left: 38rem;
+}
+
+.nav-elements {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 15px;
+}
+
+@media (max-width: 768px) {
+  .welcome-text {
+    position: relative;
+    top: auto;
+    left: auto;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-top: 2rem;
+  }
+
+  .supported-text {
+    position: relative;
+    top: auto;
+    left: auto;
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+  }
+
+  .welcome-image1, .welcome-image2, .welcome-image3 {
+    position: relative;
+    right: auto;
+    top: auto;
+    width: 80%;
+    margin: 1rem auto;
+  }
+
+  .home-start-button, .learn-more-button {
+    position: relative;
+    top: auto;
+    left: auto;
+    display: block;
+    margin: 1rem auto;
+  }
+
+  .home-start-button {
+    margin-bottom: 0.5rem;
+  }
+
+  .navigation-bar {
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+  }
+}
+
+
+
+.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+</style>
+  </head>
+  <body>
+    
+    
+    <div class="home reveal">
+      <div class="bg-maker" id="home">
+      <div class="navigation">
+        <img src="./logo.png" class="homeicon" />
+        <p class="quizquest">Quiz Quest</p>
+        <nav class="navigation-bar">
+            <a href="#home" class="nav-elements">Home</a>
+            <a href="#about" class="nav-elements">About</a>
+            <a href="#categories" class="nav-elements">Categories</a>
+            <a href="#frequent" class="nav-elements">FAQ's</a>
+            <a href="#contact-" class="nav-elements">Contact</a>
+        </nav>
+    </div></div>
+      <pre class="welcome-text">
+Welcome to 
+       Quiz Quest</pre
+      >
+      <img src="./image1.png" class="welcome-image1" />
+      <img src="./image2.png" class="welcome-image2" />
+      <img src="./image3.png" class="welcome-image3" />
+      <pre class="supported-text">
+    Embark on a Mind-Bending Journey Through 
+              the Ultimate Quiz Universe!</pre
+      >
+      <a type="button" href="#categories"  class="home-start-button">Begin Journey</a>
+      <a type="button" href="#games"  class="learn-more-button">Explore</a>
+    </div>
+
+    <!-- about section -->
+
+    <div class="aboutcontainer reveal" id="about">
+      <img src="about-img.jpg" alt="About Image" class="about-img">
+      <div class="about-text">
+          <h1><strong>Introducing QuizQuest:</strong></h1>
+          <p>Your Gateway to Knowledge and Fun</p>
+          <p>Are you ready to put your wits to the test and embark on a journey of discovery? Welcome to QuizQuest, your ultimate destination for captivating quizzes covering a vast array of topics! Whether you're a trivia enthusiast, a knowledge seeker, or simply someone who enjoys a good challenge, QuizQuest offers an engaging platform designed to entertain and educate.</p>
+          <p>At QuizQuest, we believe that learning should be enjoyable, and what better way...</p>
+      </div>
+  </div>
+
+  <!-- categories section -->
+   
+  <div class="category-container reveal" id="categories">
+    <div class="heading-container">
+        <h1 class="heading">Discover Your Favorite Topics</h1>
+    </div>
+    <a href="/sports/html.html" class="category">
+        <img src="/categories/sports.jpg" alt="Sports">
+        <div class="category-content">
+            <h2>Sports</h2>
+            <p>From the roar of the crowd<br>to the thrill of victory</p>
+        </div>
+    </a>
+    <a href="/technology/html.html" class="category">
+        <img src="/categories/technology.jpg" alt="Technology">
+        <div class="category-content">
+            <h2>Technology</h2>
+            <p>Transforming imagination<br>into reality</p>
+        </div>
+    </a>
+    <a href="/science/html.html" class="category">
+        <img src="/categories/science.jpg" alt="Science">
+        <div class="category-content">
+            <h2>Science</h2>
+            <p>Science, the torchbearer of<br>enlightenment, illuminates<br>the mysteries of the universe</p>
+        </div>
+    </a>
+    <a href="/movies/html.html" class="category">
+        <img src="/categories/movies.jpg" alt="Movies">
+        <div class="category-content">
+            <h2>Movies</h2>
+            <p>"Movies: Where stories come alive<br>and dreams take flight."</p>
+        </div>
+    </a>
+</div>
+
+
+    <div class="faqs reveal" id="frequent">
+      <h1 class="faq-text">"FAQs Unraveled: Where Curiosity Meets Clarity!"</h1>
+
+      <div class="faq-container reveal">
+        <div class="faq-item" onclick="openPopup('popup1')">
+          How are the quizzes structured? <button class="faq-button">></button>
+        </div>
+
+        <div class="faq-item" onclick="openPopup('popup2')">
+          Can I take quizzes more than once?
+          <button class="faq-button">></button>
+        </div>
+
+        <div class="faq-item" onclick="openPopup('popup3')">
+          How do I begin? <button class="faq-button">></button>
+        </div>
+
+        <div class="faq-item" onclick="openPopup('popup4')">
+          Are the quizzes free? <button class="faq-button">></button>
+        </div>
+
+        <div class="faq-item" onclick="openPopup('popup5')">
+          Are the quizzes tough? <button class="faq-button">></button>
+        </div>
+      </div>
+    </div>
+
+    <div id="popup1" class="popup">
+      <div class="popup-content">
+        <span class="close" onclick="closePopup('popup1')">&times;</span>
+        <p>
+          Our quizzes are multiple-choice and cover a wide range of topics. Each
+          quiz consists of a set number of questions you need to answer.
+        </p>
+      </div>
+    </div>
+
+    <div id="popup2" class="popup">
+      <div class="popup-content">
+        <span class="close" onclick="closePopup('popup2')">&times;</span>
+        <p>
+          Absolutely! You can retake any quiz as many times as you like to
+          improve your score and knowledge.
+        </p>
+      </div>
+    </div>
+
+    <div id="popup3" class="popup">
+      <div class="popup-content">
+        <span class="close" onclick="closePopup('popup3')">&times;</span>
+        <p>
+          Starting is easy! Just sign up or log in, pick a quiz that interests
+          you, and start answering questions. Have fun!
+        </p>
+      </div>
+    </div>
+
+    <div id="popup4" class="popup">
+      <div class="popup-content">
+        <span class="close" onclick="closePopup('popup4')">&times;</span>
+        <p>Yes, all of our quizzes are completely free to take.</p>
+      </div>
+    </div>
+
+    <div id="popup5" class="popup">
+      <div class="popup-content">
+        <span class="close" onclick="closePopup('popup5')">&times;</span>
+        <p>
+          Our quizzes range in difficulty to challenge all levels of knowledge.
+          Whether you're a beginner or a trivia master, you'll find questions
+          that suit your skill level.
+        </p>
+      </div>
+    </div>
+<script src="/FAQ/scripts.js"></script>
+
+<div id="games" class="reveal">
+<img src="bored.png" class="bored-img">
+<div class="game-content">
+<h1 style="display: inline-block; font-size:2.5rem;">Game On! Discover Our Fun Collection</h1>
+<p  style="display: inline-block; font-size:1.5rem; ">Ready for Some Fun? Click Here!</p>
+<a href="/Games list/games.html" class="cta-button">Play Now</a>
+</div>
+</div>
+
+<div class="colourr"></div> 
+<div class="contact reveal" id="contact-">
+  <h2 class="maintext">Join the Quiz Craze</h2>
+
+  <div class="icons">
+    <img src="/contact/facebook image.jpeg.jpg" class="icon" />
+    <img src="/contact/instagram image.jpeg.jpg" class="icon" />
+    <img src="/contact/x image.jpeg.jpg" class="icon" />
+    <img src="/contact/youtube image.jpeg.jpg" class="icon" />
+  </div>
+
+  <div class="formitems reveal">
+    <h2 class="maintext" style="top: 12rem">Dive into the fun</h2>
+
+    <div class="contact-container">
+      <div class="contact-info">
+          <p style="text-align: center;">Amrita Vishwa Vidyapeetham<br>Andhra Pradesh<br>India</p>
+          <p style="color: #e67e22;">📞 <a href="tel:+919997777000" style="color: #e67e22;">+91-999-7777-000</a></p>
+          <p style="color: #e67e22;">📧 <a href="mailto:macherlasaimani@gmail.com" style="color: #e67e22;">quizquest@gmail.com</a></p>
+          
+      </div>
+      <div class="contact-form">
+          <h2>Contact</h2>
+          <form>
+              <input type="text" name="name" placeholder="Name" required class="cname">
+              <input type="text" name="phone" placeholder="Phone" required class="cphone">
+              <input type="email" name="email" placeholder="Email address" required class="cmail">
+              <textarea name="message" placeholder="Message" required></textarea>
+              <button type="submit" class="cbutton">CONTACT US</button>
+          </form>
+      </div>
+  </div>
+</div>
+</div>
+      <script src="./script.js">
+
+      </script>
+       <script>
+        const images = document.querySelectorAll('.welcome-image1, .welcome-image2, .welcome-image3');
+        const positions = [
+            {right: '1%', top: '10rem'},
+            {right: '2%', top: '25rem'},
+            {right: '19%', top: '19rem'}
+        ];
+
+        function rotatePositions() {
+            const lastPosition = positions.pop();
+            positions.unshift(lastPosition);
+        }
+
+        images.forEach(image => {
+            image.addEventListener('mouseenter', () => {
+                rotatePositions();
+                images.forEach((img, index) => {
+                    setTimeout(() => {
+                        img.style.right = positions[index].right;
+                        img.style.top = positions[index].top;
+                    }, index * 150); // Adding a slight delay between each image's movement
+                });
+            });
+        });
+        const reveals = document.querySelectorAll('.reveal');
+
+function revealOnScroll() {
+  const windowHeight = window.innerHeight;
+  const revealPoint = 150;
+
+  reveals.forEach(reveal => {
+    const revealTop = reveal.getBoundingClientRect().top;
+
+    if (revealTop < windowHeight - revealPoint) {
+      reveal.classList.add('active');
+    } else {
+      reveal.classList.remove('active');
+    }
+  });
+}
+
+window.addEventListener('scroll', revealOnScroll);
+      </script>
+  </body>
+</html>

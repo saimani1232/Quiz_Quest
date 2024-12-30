@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Games Section</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      padding: 20px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #333;
+      margin-bottom: 2rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: #666;
+      margin-bottom: 10px;
+    }
+
+    .games-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 3rem;
+    }
+
+    .game-card {
+      padding: 20px;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .game-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .game-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .game-description {
+      font-size: 1rem;
+      color: #555;
+      margin-bottom: 10px;
+      margin-top: 2rem;
+      flex-grow: 1;
+    }
+
+    .game-link {
+      align-self: flex-end;
+      padding: 10px 20px;
+      background-color: #e67e22;
+      color: #fff;
+      text-decoration: none;
+      font-size: 1rem;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .game-link:hover {
+      background-color: #d35400;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Refresh Your Mind with These Games</h1>
+      <p>Tired of playing quizzes? Enjoy these fun games!</p>
+    </header>
+    <section class="games-list">
+     
+      <div class="game-card">
+        <h2 class="game-title">Guess The Number</h2>
+        <img src="gtn.png">
+        <p class="game-description">Challenge your intuition and logic in this timeless game where you have to guess the secret number.</p>
+        <a href="/Games list/Guess the number/index.html" class="game-link">Play Game 1</a>
+      </div>
+
+      
+      <div class="game-card">
+        <h2 class="game-title">Pattern Prowess</h2>
+        <img src="mem.png">
+        <p class="game-description"> Follow Simon's lead and repeat the sequence of colors and tones. How far can you go without making a mistake?</p>
+        <a href="/Games list/Simon game/index.html" class="game-link">Play Game 2</a>
+      </div>
+
+    
+      <div class="game-card">
+        <h2 class="game-title">Dual Dice Dash</h2>
+        <img src="2dice.png">
+        <p class="game-description">Challenge a friend to a thrilling dice game where luck meets strategy! Roll the dice, make your moves, and outwit your opponent to claim victory.</p>
+        <a href="/Games list/Dice game/index.html" class="game-link">Play Game 3</a>
+      </div>
+
+      
+    </section>
+  </div>
+</body>
+</html>
