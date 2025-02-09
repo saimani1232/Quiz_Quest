@@ -93,5 +93,7 @@ Contributions are welcome! Follow these steps to contribute:
 4. Save and commit the file.
 5. Push it to GitHub, and it will render beautifully. 🚀  
 
-Let me know if you need any modifications! 😃
+**📞 Contact**
+🔹 Sai Mani Macherla
+📧 macherlasaimani@gmail.com
 
