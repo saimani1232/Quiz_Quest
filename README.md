@@ -70,3 +70,13 @@ Contributions are welcome! Follow these steps to contribute:
  
    cd Quiz_Quest
 
+3. **Create a new feature branch**  
+   Run the following command to create a new branch for your feature:  
+   ```bash
+   git checkout -b feature-name
+
+### Why This Format?  
+✅ **Command in a code block** for easy copying  
+✅ **Short explanation** for clarity  
+
+Let me know if you need more refinements! 🚀
