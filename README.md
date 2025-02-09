@@ -76,13 +76,14 @@ Contributions are welcome! Follow these steps to contribute:
    git checkout -b feature-name
    
 4. **Commit your changes:**
-```bash
-git commit -m "Added a cool new feature"
+   ```bash
+   git commit -m "Added a cool new feature"
 
 5. **Push to the branch:**
-```bash
-git push origin feature/my-new-feature
+   ```bash
+   git push origin feature/my-new-feature
 
+6. **Create a Pull Request 🚀**
 ---
 
 ### How to Use This:
