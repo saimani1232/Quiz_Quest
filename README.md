@@ -75,8 +75,15 @@ Contributions are welcome! Follow these steps to contribute:
    ```bash
    git checkout -b feature-name
 
-### Why This Format?  
-✅ **Command in a code block** for easy copying  
-✅ **Short explanation** for clarity  
 
-Let me know if you need more refinements! 🚀
+---
+
+### How to Use This:
+1. Copy the above content.
+2. Create a `README.md` file inside your GitHub repository.
+3. Paste the content into it.
+4. Save and commit the file.
+5. Push it to GitHub, and it will render beautifully. 🚀  
+
+Let me know if you need any modifications! 😃
+
