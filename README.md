@@ -74,7 +74,14 @@ Contributions are welcome! Follow these steps to contribute:
    Run the following command to create a new branch for your feature:  
    ```bash
    git checkout -b feature-name
+   
+4. **Commit your changes:**
+```bash
+git commit -m "Added a cool new feature"
 
+5. **Push to the branch:**
+```bash
+git push origin feature/my-new-feature
 
 ---
 
