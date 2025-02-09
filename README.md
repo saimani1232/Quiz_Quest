@@ -48,11 +48,11 @@ Quiz_Quest/ ├── Home/ │ ├── home page.html # Main landing page │
 1️⃣ **Clone the repository**  
 ```bash
 git clone https://github.com/saimani1232/Quiz_Quest.git
-
+```
 2️⃣ Navigate to the project folder
-
+```
 cd Quiz_Quest
-
+```
 3️⃣ Open the Homepage
 
 1)Locate the Home folder.
@@ -67,5 +67,6 @@ Contributions are welcome! Follow these steps to contribute:
 2. **Clone your forked repository**  
    ```bash
    git clone https://github.com/your-username/Quiz_Quest.git
+ 
    cd Quiz_Quest
 
