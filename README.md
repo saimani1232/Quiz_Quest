@@ -1,7 +1,6 @@
 # 🎉 Quiz_Quest 🧠🎯  
 *A Fun & Engaging Quiz Website!*  
-
-![Quiz Quest Banner](https://via.placeholder.com/1200x400?text=Quiz_Quest)  
+ 
 
 ## 📌 Overview  
 
@@ -18,13 +17,6 @@
 
 ---
 
-## 🎥 Demo  
-
-🔗 [Live Demo](#) *(Add your hosted link if available!)*  
-
-![Quiz Quest Preview](https://via.placeholder.com/800x400?text=Quiz+Preview)  
-
----
 
 ## 🛠️ Technologies Used  
 
@@ -39,4 +31,41 @@
 ---
 
 ## 📂 Project Structure  
+Quiz_Quest/ ├── Home/ │ ├── home page.html # Main landing page │ ├── styles.css # Styling for the project │ ├── script.js # Handles quiz logic │ └── assets/ # Images and icons ├── About/ ├── FAQ/ ├── Games list/ ├── Trophies/ ├── categories/ ├── contact/ ├── movies Q-A/ ├── science Q-A/ ├── sports Q-A/ ├── technology Q-A/
+
+
+📌 **Key Files**:  
+📜 `home page.html` – Open this file in your browser to start playing!  
+🎨 `styles.css` – All the styles to make the website look beautiful.  
+⚡ `script.js` – Adds interactivity to the quizzes.  
+
+---
+
+## 💻 Getting Started  
+
+### 🔧 Installation  
+
+1️⃣ **Clone the repository**  
+```bash
+git clone https://github.com/saimani1232/Quiz_Quest.git
+
+2️⃣ Navigate to the project folder
+
+cd Quiz_Quest
+
+3️⃣ Open the Homepage
+
+1)Locate the Home folder.
+
+2)Open home page.html in your favorite web browser.
+
+## 🚀 Contributing  
+
+Contributions are welcome! Follow these steps to contribute:  
+
+1. **Fork the repository** 🍴  
+2. **Clone your forked repository**  
+   ```bash
+   git clone https://github.com/your-username/Quiz_Quest.git
+   cd Quiz_Quest
 
