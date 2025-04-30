@@ -1,0 +1,500 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Rubik";
+    scroll-behavior: smooth;
+}
+
+.bg-maker {
+    background: linear-gradient(to bottom right , #fdf1e8 30%, #f3bfe4 100%);
+    width: 100%;
+    height: 55rem;
+    position: relative;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #ffffffc9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.home {
+    width: 100%;
+    height: max-content;
+}
+
+/* .homeicon {} */
+
+.navigation-bar a {
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    transition: none;
+}
+
+.navigation-bar a:hover {
+text-decoration: underline;
+transition: all 2s ease;
+
+}
+
+.welcome-text {
+    font-weight: 420;
+    position: absolute;
+    top: 12rem;
+    left: 3.5rem;
+    font-size: 4rem;
+}
+
+.welcome-image1, .welcome-image2, .welcome-image3 {
+    transition: transform 0.5s ease-in-out, right 0.5s ease-in-out, top 0.5s ease-in-out;
+    position: absolute;
+    width: 23rem;
+}
+
+.welcome-image1 {
+    right: 1%;
+    top: 10rem;
+    animation: moveToLeft 1s ease-in 0s;
+}
+
+.welcome-image2 {
+    right: 2%;
+    top: 25rem;
+    z-index: 3;
+    animation: moveToRight 1s ease-in 0s;
+}
+
+.welcome-image3 {
+    right: 19%;
+    top: 19rem;
+    animation: moveToBottom 1s ease-in 0s;
+}
+
+.home-start-button, .learn-more-button {
+    position: absolute;
+    padding: 1.5rem 2.1rem;
+    text-decoration: none;
+    font-size: 1.3rem;
+    animation-fill-mode: backwards;
+    color: white;
+    box-shadow: 0 4px 15px rgba(79, 172, 254, 0.5);
+    border: none;
+    border-radius: 10rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: linear-gradient(-45deg, #FFA63D, #FF3D77, #1772e8, #3CF0C5);
+background-size: 600%;
+animation: anime 16s linear infinite;
+}
+
+.hide{
+    display: none;
+}
+.btn2 {
+position: absolute;
+margin-top: -70px;
+z-index: -1;
+filter: blur(30px);
+opacity: 0.8;
+}
+@keyframes anime {
+0% {
+background-position: 0% 50%;
+}
+50% {
+background-position: 100% 50%;
+}
+100% {
+background-position: 0% 50%;
+}
+}
+
+.home-start-button:hover, .learn-more-button:hover {
+    transform: scale(1.05);
+    
+}
+
+.home-start-button:active, .learn-more-button:active {
+    transform: translateY(2px);
+    box-shadow: 0 4px 10px rgba(79, 172, 254, 0.3);
+}
+
+.home-start-button {
+    top: 39rem;
+    left: 8rem;
+}
+
+.learn-more-button {
+    top: 39rem;
+    left: 25rem;
+}
+
+.supported-text {
+    position: absolute;
+    top: 29rem;
+    left: 2.5rem;
+    font-size: 1.5rem;
+    line-height: 2.3rem;
+}
+
+@keyframes moveToLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    80% {
+        transform: translateX(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes moveToRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    80% {
+        transform: translateX(-10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes moveToBottom {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    80% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(10px);
+    }
+}
+#games{
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 6rem;
+    padding-top: 6rem;
+    background-color: aliceblue;
+}
+.game-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+gap:2.5rem
+}
+.bored-img{
+    width: 26rem;
+    height: 23rem;
+    margin-top: 3rem;
+}
+.cta-button {
+    padding: 15px 30px;
+    padding-top: 18px;
+    padding-left: 36px;
+    font-size: 1.5rem;
+    max-width: 11rem;vertical-align: center;
+    max-height: 4.9rem;
+    background-color: #ff5c5c;
+    color: white;
+    text-decoration: none;
+    border-radius: 5rem;
+    transition: background-color 0.3s ease;
+  }
+.navigation {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 0rem;
+    align-items: center;
+    z-index: 5;
+}
+.wsticky{
+    max-height: 5.5rem;
+}
+.homeicon {
+    height: 7rem;
+    margin-right: 1.5rem;
+}
+
+.quizquest {
+    color: #000000;
+    font-size: 24px;
+}
+
+.navigation-bar {
+    display: flex;
+    gap: 2rem;
+    margin-left: 38rem;
+}
+
+.nav-elements {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+
+/* Add these responsive updates to your homestyles.css */
+
+/* Mobile Navigation Styles */
+@media (max-width: 1024px) {
+    .navigation {
+      flex-direction: column;
+      padding: 1rem;
+    }
+    
+    .navigation-bar {
+      margin-left: 0;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 1rem 0;
+    }
+    
+    .homeicon {
+      margin-right: 0;
+    }
+  }
+  
+  /* Responsive Home Section */
+  @media (max-width: 1200px) {
+    .welcome-text {
+      font-size: 3.5rem;
+    }
+    
+    .supported-text {
+      font-size: 1.3rem;
+    }
+    
+    .welcome-image1, .welcome-image2, .welcome-image3 {
+      width: 20rem;
+    }
+  }
+  
+  @media (max-width: 900px) {
+    .welcome-text {
+      font-size: 3rem;
+      top: 8rem;
+    }
+    
+    .supported-text {
+      top: 23rem;
+      font-size: 1.2rem;
+    }
+    
+    .welcome-image1, .welcome-image2, .welcome-image3 {
+      width: 18rem;
+    }
+    
+    .home-start-button, .learn-more-button {
+      padding: 1.2rem 1.8rem;
+      font-size: 1.1rem;
+    }
+    
+    .home-start-button {
+      top: 35rem;
+      left: 5rem;
+    }
+    
+    .learn-more-button {
+      top: 35rem;
+      left: 18rem;
+    }
+  }
+  
+  /* Mobile Home Layout */
+  @media (max-width: 768px) {
+    .bg-maker {
+      height: auto;
+      padding-bottom: 4rem;
+    }
+    
+    .welcome-text {
+      position: relative;
+      top: auto;
+      left: auto;
+      text-align: center;
+      font-size: 2.5rem;
+      margin-top: 6rem;
+      padding: 0 1rem;
+    }
+    
+    .supported-text {
+      position: relative;
+      top: auto;
+      left: auto;
+      text-align: center;
+      font-size: 1.2rem;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      white-space: normal;
+      line-height: 1.8rem;
+    }
+    
+    .welcome-image1, .welcome-image2, .welcome-image3 {
+      position: relative;
+      display: block;
+      width: 70%;
+      max-width: 300px;
+      margin: 1rem auto;
+      right: auto;
+      top: auto;
+    }
+    
+    .welcome-image3 {
+      display: none;
+    }
+    
+    .home-start-button, .learn-more-button {
+      position: relative;
+      top: auto;
+      left: auto;
+      display: block;
+      width: 80%;
+      max-width: 250px;
+      margin: 1rem auto;
+      text-align: center;
+    }
+  }
+  
+  /* Responsive Games Section */
+  @media (max-width: 900px) {
+    #games {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 3rem 1rem;
+    }
+    
+    .game-content {
+      align-items: center;
+    }
+    
+    .bored-img {
+      width: 20rem;
+      height: auto;
+      margin-bottom: 2rem;
+    }
+    
+    .game-content h1 {
+      font-size: 2rem;
+    }
+    
+    .game-content p {
+      font-size: 1.2rem;
+    }
+    
+    .cta-button {
+      padding: 12px 24px;
+      font-size: 1.2rem;
+    }
+  }
+  
+  /* Responsive Categories */
+  @media (max-width: 1024px) {
+    .category-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .category-container {
+      grid-template-columns: 1fr;
+    }
+    
+    .category {
+      margin: 1rem 0;
+    }
+    
+    .heading {
+      font-size: 1.8rem;
+    }
+  }
+  
+  /* Responsive FAQ Section */
+  @media (max-width: 768px) {
+    .faq-text {
+      font-size: 1.5rem;
+      padding: 0 1rem;
+    }
+    
+    .faq-container {
+      width: 90%;
+    }
+    
+    .faq-item {
+      font-size: 1rem;
+      padding: 1rem;
+    }
+    
+    .popup-content {
+      width: 80%;
+      padding: 1rem;
+    }
+  }
+  
+  /* Responsive Contact Section */
+  @media (max-width: 768px) {
+    .contact-container {
+      flex-direction: column;
+    }
+    
+    .contact-info, .contact-form {
+      width: 90%;
+      margin: 1rem auto;
+    }
+    
+    .icons {
+      justify-content: center;
+    }
+    
+    .icon {
+      width: 2.5rem;
+      height: 2.5rem;
+      margin: 0 0.5rem;
+    }
+    
+    .formitems .maintext {
+      position: relative;
+      top: auto;
+      text-align: center;
+      margin: 2rem 0;
+    }
+  }
