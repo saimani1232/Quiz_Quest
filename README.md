@@ -7,6 +7,8 @@
 **Quiz_Quest** is an interactive quiz website designed to test your knowledge across various topics while keeping it fun and engaging. Challenge yourself, compete with friends, and explore a variety of quizzes!  
 
 ---
+🌐 **Live Demo:** [https://quiz-questt.netlify.app/](https://quiz-questt.netlify.app/)
+
 
 ## 🚀 Features  
 
